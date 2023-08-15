@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="vuesax_linear_receipt-disscount" data-name="vuesax/linear/receipt-disscount" transform="translate(-428 -572)">
+    <g id="receipt-disscount" transform="translate(428 572)">
+      <path id="Vector" d="M2.692,14.75a1.465,1.465,0,0,1,2.325.125L5.858,16A1.449,1.449,0,0,0,8.3,16l.842-1.125a1.465,1.465,0,0,1,2.325-.125c1.483,1.583,2.692,1.058,2.692-1.158V4.2C14.167.842,13.383,0,10.233,0h-6.3C.783,0,0,.842,0,4.2v9.383C0,15.808,1.217,16.325,2.692,14.75Z" transform="translate(2.917 1.667)" fill="none" stroke="#8ca5be" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Vector-2" data-name="Vector" d="M0,5,5,0" transform="translate(7.5 5.833)" fill="none" stroke="#8ca5be" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Vector-3" data-name="Vector" d="M.495.5H.5" transform="translate(12.001 10.333)" fill="none" stroke="#8ca5be" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Vector-4" data-name="Vector" d="M.495.5H.5" transform="translate(7.001 5.75)" fill="none" stroke="#8ca5be" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Vector-5" data-name="Vector" d="M0,0H20V20H0Z" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

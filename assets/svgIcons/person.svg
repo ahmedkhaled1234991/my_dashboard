@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <g id="vuesax_bold_frame" data-name="vuesax/bold/frame" transform="translate(-108 -252)">
+    <g id="frame" transform="translate(108 252)">
+      <path id="Vector" d="M25.333,0a25.31,25.31,0,0,0-.64,50.613,4.3,4.3,0,0,1,1.173,0h.373A25.314,25.314,0,0,0,25.333,0Z" transform="translate(38.667 10.667)" fill="#fff"/>
+      <path id="Vector-2" data-name="Vector" d="M64.64,7.44c-14.88-9.92-39.147-9.92-54.133,0C3.733,11.973,0,18.107,0,24.667s3.733,12.64,10.453,17.12c7.467,5.013,17.28,7.52,27.093,7.52S57.173,46.8,64.64,41.787c6.72-4.533,10.453-10.613,10.453-17.227C75.04,18,71.36,11.92,64.64,7.44Z" transform="translate(26.453 68.027)" fill="#fff"/>
+      <path id="Vector-3" data-name="Vector" d="M0,0H128V128H0Z" transform="translate(128 128) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

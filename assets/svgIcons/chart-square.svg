@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="chart-square" transform="translate(-748 -252)">
+    <g id="Group" transform="translate(753.267 257.5)">
+      <path id="Vector" d="M3.158,0H.95A.95.95,0,0,0,0,.95V5.217H3.158V0Z" transform="translate(0 3.792)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Vector-2" data-name="Vector" d="M2.217,0H.95A.95.95,0,0,0,0,.95V9H3.158V.95A.943.943,0,0,0,2.217,0Z" transform="translate(3.151)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Vector-3" data-name="Vector" d="M2.208,0H0V3.792H3.158V.95A.96.96,0,0,0,2.208,0Z" transform="translate(6.315 5.208)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <path id="Vector-4" data-name="Vector" d="M5.833,16.667h5c4.167,0,5.833-1.667,5.833-5.833v-5C16.667,1.667,15,0,10.833,0h-5C1.667,0,0,1.667,0,5.833v5C0,15,1.667,16.667,5.833,16.667Z" transform="translate(749.667 253.667)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Vector-5" data-name="Vector" d="M0,0H20V20H0Z" transform="translate(748 252)" fill="none" opacity="0"/>
+  </g>
+</svg>
