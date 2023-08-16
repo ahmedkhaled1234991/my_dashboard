@@ -55,7 +55,7 @@ class EntryPoint extends StatelessWidget {
             routerConfig: GoRouterConfig.router,
             // theme: ThemeData(fontFamily: "Alexandria"),
             debugShowCheckedModeBanner: false,
-            title: 'Coops News Dashboard',
+            title: 'My Dashboard',
             locale: Locale(appLan.appLang.name),
             supportedLocales:
                 Languages.values.map((e) => Locale(e.name)).toList(),
