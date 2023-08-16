@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
+import 'package:my_dashboard/Core/Language/locales.dart';
 
-import '../../../../Utilities/theme_helper.dart';
+import '../../../../Utilities/strings.dart';
+import '../../../../Widgets/main_screen_widget.dart';
 import '../home_controller.dart';
 
 class SmallHomeScreen extends StatefulWidget {
@@ -20,9 +22,9 @@ class _SmallHomeScreenState extends StateMVC<SmallHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: ThemeClass.backGroundColor,
-      body: Center(
+    return MainScreenWidget(
+      title: Strings.home.tr,
+      content: const Center(
         child: Text('Home small screen'),
       ),
     );

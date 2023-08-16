@@ -23,5 +23,13 @@
   "offers": "العروض",
   "album": "الألبوم",
   "achievements": "الإنجازات",
-  "settings": "الإعدادات"
+  "settings": "الإعدادات",
+  "clientsNumber": "عدد العملاء",
+  "totalProducts": "إجمالي المنتجات",
+  "totalProfit": "إجمالي الأرباح",
+  "january": "يناير",
+  "february": "فبراير",
+  "march": "مارس",
+  "april": "أبريل",
+  "may": "مايو"
 }

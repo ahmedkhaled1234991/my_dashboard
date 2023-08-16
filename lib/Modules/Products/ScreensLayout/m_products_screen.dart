@@ -32,7 +32,6 @@ class _MediumProductsScreenState extends StateMVC<MediumProductsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // if (con.productsList.isEmpty) con.productsList = [ProductsModel()];
     final tableData = ProductsDataTable<ProductsModel>(context: context);
     return LoadingWidget(
       loading: con.loading,

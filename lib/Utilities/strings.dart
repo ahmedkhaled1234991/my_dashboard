@@ -29,6 +29,14 @@ class Strings {
   static const String country = "country";
   static const String supplierName = "supplierName";
   static const String from = "from";
+  static const String clientsNumber = "clientsNumber";
+  static const String totalProducts = "totalProducts";
+  static const String totalProfit = "totalProfit";
+  static const String january = "january";
+  static const String february = "february";
+  static const String march = "march";
+  static const String april = "april";
+  static const String may = "may";
 
   // static const String accountName = "accountName";
   // static const String personalName = "personalName";

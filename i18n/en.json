@@ -23,5 +23,13 @@
   "offers": "Offers",
   "album": "Album",
   "achievements": "Achievements",
-  "settings": "Settings"
+  "settings": "Settings",
+  "clientsNumber": "Clients Number",
+  "totalProducts": "Total Products",
+  "totalProfit": "Total Profit",
+  "january": "Jan",
+  "february": "Feb",
+  "march": "Mar",
+  "april": "Apr",
+  "may": "May"
 }

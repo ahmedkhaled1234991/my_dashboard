@@ -14,8 +14,6 @@ class MenuModel {
 enum MenuBarRoutes {
   home,
   products,
-  news,
-  newsArrangement,
   offers,
   album,
   achievements,

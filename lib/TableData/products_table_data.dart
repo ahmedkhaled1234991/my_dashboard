@@ -37,19 +37,19 @@ class ProductsDataTable<T extends ProductsModel> with WidgetColorMixin {
         TableDataModel(
           id: 1,
           columnTitle: Strings.name.tr,
-          cellValue: "لبن مجفف",
+          cellValue: "لبن",
           columnSize: ColumnSize.M,
         ),
         TableDataModel(
           id: 2,
           columnTitle: Strings.section.tr,
-          cellValue: "عروض الجمعية",
+          cellValue: "العروض",
           columnSize: ColumnSize.L,
         ),
         TableDataModel(
           id: 3,
           columnTitle: Strings.country.tr,
-          cellValue: "الكويت",
+          cellValue: "مصر",
           columnSize: ColumnSize.L,
         ),
         TableDataModel(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
+import 'package:my_dashboard/Core/Language/locales.dart';
 
-import '../../../../Utilities/theme_helper.dart';
+import '../../../Utilities/strings.dart';
+import '../../../Widgets/main_screen_widget.dart';
 import '../products_controller.dart';
 
 class SmallProductsScreen extends StatefulWidget {
@@ -19,9 +21,9 @@ class _SmallProductsScreenState extends StateMVC<SmallProductsScreen> {
   late ProductsController con;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: ThemeClass.backGroundColor,
-      body: Center(
+    return MainScreenWidget(
+      title: Strings.products.tr,
+      content: const Center(
         child: Text('Products small screen'),
       ),
     );

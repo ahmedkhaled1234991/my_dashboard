@@ -1,7 +1,7 @@
 import 'package:custom_widgets/responsive/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
-import '../../../Models/menu_model.dart';
+import '../../Models/menu_model.dart';
 import 'ScreensLayout/l_home_screen.dart';
 import 'ScreensLayout/m_home_screen.dart';
 import 'ScreensLayout/s_home_screen.dart';

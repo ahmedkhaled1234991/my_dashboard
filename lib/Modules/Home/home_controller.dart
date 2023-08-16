@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
+import '../../Models/sales_data_model.dart';
+import '../../Utilities/strings.dart';
+
 class HomeController extends ControllerMVC {
   // singleton
   factory HomeController() {
@@ -12,7 +15,14 @@ class HomeController extends ControllerMVC {
 
   bool loading = false;
   late TextEditingController searchController;
-  // List<SectionModel> sectionsList = [];
+  List<SalesDataModel> data = [
+    SalesDataModel(Strings.january, 35),
+    SalesDataModel(Strings.february, 28),
+    SalesDataModel(Strings.march, 34),
+    SalesDataModel(Strings.april, 32),
+    SalesDataModel(Strings.may, 40)
+  ];
+
   @override
   void initState() {
     searchController = TextEditingController();

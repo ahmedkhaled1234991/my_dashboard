@@ -24,47 +24,50 @@ class MainScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 4,
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16.r),
-      ),
-      child: Column(
-        children: [
-          32.h.heightBox,
-          Row(
-            children: [
-              Text(
-                title,
-                style: ThemeStyleHelper.s32RegTextStyle
-                    .copyWith(color: ThemeClass.primaryColor),
-              ),
-              const Spacer(),
-              if (searchController != null)
-                CustomTextFieldWidget(
-                  controller: searchController,
-                  backGroundColor: Colors.white,
-                  hint: Strings.search.tr,
-                  hintStyle: ThemeStyleHelper.s16RegTextStyle,
-                  width: 360.w,
-                  suffixIcon: SvgPicture.asset(
-                    Assets.imagesSvgIconsSearchNormal1,
-                    width: 20.r,
-                    height: 20.r,
-                    color: ThemeClass.primaryColor,
-                  ),
-                  style: ThemeStyleHelper.s16RegTextStyle
-                      .copyWith(color: Colors.black),
+    return Scaffold(
+      backgroundColor: ThemeClass.backGroundColor,
+      body: Card(
+        elevation: 4,
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.r),
+        ),
+        child: Column(
+          children: [
+            32.h.heightBox,
+            Row(
+              children: [
+                Text(
+                  title,
+                  style: ThemeStyleHelper.s32RegTextStyle
+                      .copyWith(color: ThemeClass.primaryColor),
                 ),
-              24.0.w.widthBox,
-              leadingWidget ?? const SizedBox(),
-            ],
-          ).addPaddingSymmetric(horizontal: 40.w, vertical: 0),
-          16.h.heightBox,
-          content.addPaddingHorizontal(40.w).expand,
-          //table
-        ],
+                const Spacer(),
+                if (searchController != null)
+                  CustomTextFieldWidget(
+                    controller: searchController,
+                    backGroundColor: Colors.white,
+                    hint: Strings.search.tr,
+                    hintStyle: ThemeStyleHelper.s16RegTextStyle,
+                    width: 360.w,
+                    suffixIcon: SvgPicture.asset(
+                      Assets.imagesSvgIconsSearchNormal1,
+                      width: 20.r,
+                      height: 20.r,
+                      color: ThemeClass.primaryColor,
+                    ),
+                    style: ThemeStyleHelper.s16RegTextStyle
+                        .copyWith(color: Colors.black),
+                  ),
+                24.0.w.widthBox,
+                leadingWidget ?? const SizedBox(),
+              ],
+            ).addPaddingSymmetric(horizontal: 40.w, vertical: 0),
+            16.h.heightBox,
+            content.addPaddingHorizontal(40.w).expand,
+            //table
+          ],
+        ),
       ),
     );
   }

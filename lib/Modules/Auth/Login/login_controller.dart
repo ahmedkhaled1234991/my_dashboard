@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
-import '../../Home/ViewSections/home_screen.dart';
+import '../../Home/home_screen.dart';
 import 'login_data_handler.dart';
 
 class LoginController extends ControllerMVC {

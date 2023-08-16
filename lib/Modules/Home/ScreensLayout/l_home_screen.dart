@@ -14,6 +14,7 @@ import '../../../../Utilities/theme_style_helper.dart';
 import '../../../../Widgets/custom_button_widget.dart';
 import '../../../../Widgets/main_screen_widget.dart';
 import '../../../../generated/assets.dart';
+import '../Widgets/small_information_card_widget.dart';
 import '../home_controller.dart';
 
 class LargeHomeScreen extends StatefulWidget {
@@ -29,13 +30,6 @@ class _LargeHomeScreenState extends StateMVC<LargeHomeScreen> {
   }
 
   late HomeController con;
-  List<SalesDataModel> data = [
-    SalesDataModel('Jan', 35),
-    SalesDataModel('Feb', 28),
-    SalesDataModel('Mar', 34),
-    SalesDataModel('Apr', 32),
-    SalesDataModel('May', 40)
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -49,118 +43,22 @@ class _LargeHomeScreenState extends StateMVC<LargeHomeScreen> {
           children: [
             Row(
               children: [
-                SizedBox(
-                  width: 296.w,
-                  height: 128.h,
-                  child: Card(
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.r),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(Assets.iconStaff,
-                            width: 72.r, height: 72.r),
-                        16.w.widthBox,
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            4.0.h.heightBox,
-                            Text(
-                              '1000',
-                              style: ThemeStyleHelper.s22RegTextStyle.copyWith(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1.2),
-                            ),
-                            Text(
-                              'عدد الموظفين',
-                              style: ThemeStyleHelper.s16RegTextStyle
-                                  .copyWith(color: Colors.black),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ).addPaddingHorizontal(24.w),
-                  ),
+                SmallInformationCardWidget(
+                  title: Strings.clientsNumber.tr,
+                  iconPath: Assets.iconStaff,
+                  value: '1000',
                 ),
                 24.0.w.widthBox,
-                SizedBox(
-                  width: 296.w,
-                  height: 128.h,
-                  child: Card(
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.r),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(Assets.iconProduct,
-                            width: 72.r, height: 72.r),
-                        16.w.widthBox,
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            4.0.h.heightBox,
-                            Text(
-                              '5000',
-                              style: ThemeStyleHelper.s22RegTextStyle.copyWith(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1.2),
-                            ),
-                            Text(
-                              'اجمالى المنتجات',
-                              style: ThemeStyleHelper.s16RegTextStyle
-                                  .copyWith(color: Colors.black),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ).addPaddingHorizontal(24.w),
-                  ),
+                SmallInformationCardWidget(
+                  title: Strings.totalProducts.tr,
+                  iconPath: Assets.iconProduct,
+                  value: '5000',
                 ),
                 24.0.w.widthBox,
-                SizedBox(
-                  width: 296.w,
-                  height: 128.h,
-                  child: Card(
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16.r),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(Assets.iconProfit,
-                            width: 72.r, height: 72.r),
-                        16.w.widthBox,
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            4.0.h.heightBox,
-                            Text(
-                              '300000',
-                              style: ThemeStyleHelper.s22RegTextStyle.copyWith(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  height: 1.2),
-                            ),
-                            Text(
-                              'اجمالى الارباح',
-                              style: ThemeStyleHelper.s16RegTextStyle
-                                  .copyWith(color: Colors.black),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ).addPaddingHorizontal(24.w),
-                  ),
+                SmallInformationCardWidget(
+                  title: Strings.totalProfit.tr,
+                  iconPath: Assets.iconProfit,
+                  value: '300000',
                 ),
               ],
             ),
@@ -180,7 +78,7 @@ class _LargeHomeScreenState extends StateMVC<LargeHomeScreen> {
                         tooltipBehavior: TooltipBehavior(enable: true),
                         series: <ChartSeries<SalesDataModel, String>>[
                           SplineAreaSeries<SalesDataModel, String>(
-                            dataSource: data,
+                            dataSource: con.data,
                             xValueMapper: (SalesDataModel sales, _) =>
                                 sales.year,
                             yValueMapper: (SalesDataModel sales, _) =>
@@ -205,7 +103,7 @@ class _LargeHomeScreenState extends StateMVC<LargeHomeScreen> {
                       tooltipBehavior: TooltipBehavior(enable: true),
                       series: <ChartSeries<SalesDataModel, String>>[
                         ColumnSeries<SalesDataModel, String>(
-                          dataSource: data,
+                          dataSource: con.data,
                           xValueMapper: (SalesDataModel sales, _) => sales.year,
                           yValueMapper: (SalesDataModel sales, _) =>
                               sales.sales,
