@@ -4,12 +4,11 @@ import 'package:extensions/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:intl/intl.dart';
+import 'package:intl/intl.dart' as intl;
 import 'package:my_dashboard/Core/Language/locales.dart';
 import 'package:provider/provider.dart';
 
 import '../../Core/Language/app_languages.dart';
-import '../../Utilities/shared_preferences.dart';
 import '../../Utilities/strings.dart';
 import '../../Utilities/theme_helper.dart';
 import '../../Utilities/theme_style_helper.dart';
@@ -80,7 +79,8 @@ class _DashboardMenuLayoutState extends State<DashboardMenuLayout> {
                         ),
                         const Spacer(),
                         Text(
-                          DateFormat('EEEE d MMMM', appLan.appLang.name).format(
+                          intl.DateFormat('EEEE d MMMM', appLan.appLang.name)
+                              .format(
                             DateTime.now(),
                           ),
                           style: ThemeStyleHelper.s16RegTextStyle
@@ -88,9 +88,10 @@ class _DashboardMenuLayoutState extends State<DashboardMenuLayout> {
                         ),
                         16.w.widthBox,
                         Text(
-                          SharedPref.getTemperature() ?? "-",
+                          "30 °C", // SharedPref.getTemperature() ?? "-",
                           style: ThemeStyleHelper.s16RegTextStyle
                               .copyWith(color: ThemeClass.primaryColor),
+                          textDirection: TextDirection.ltr,
                         ),
                         24.0.w.widthBox,
                         InkWell(

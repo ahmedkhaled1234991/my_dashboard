@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
 
 import '../../Home/home_screen.dart';
-import 'login_data_handler.dart';
 
 class LoginController extends ControllerMVC {
   // singleton
@@ -31,11 +30,11 @@ class LoginController extends ControllerMVC {
   }
 
   Future login(BuildContext context) async {
-    final result = await DataHandler.login(
-      userName: usernameController.text,
-      password: passwordController.text,
-    );
-    result.fold((l) {}, (r) {});
+    // final result = await DataHandler.login(
+    //   userName: usernameController.text,
+    //   password: passwordController.text,
+    // );
+    // result.fold((l) {}, (r) {});
     GoRouter.of(context).goNamed(HomeScreen.routeName);
   }
 

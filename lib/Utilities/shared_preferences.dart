@@ -1,5 +1,13 @@
+import 'package:dartz/dartz.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../Core/API/generic_request.dart';
+import '../Core/API/request_method.dart';
+import '../Core/error/exceptions.dart';
+import '../Core/error/failures.dart';
+import '../Models/temp_Model.dart';
+import 'api_end_point.dart';
 
 class SharedPref {
   static SharedPreferences get prefs => GetIt.instance.get<SharedPreferences>();
@@ -15,17 +23,36 @@ class SharedPref {
     await prefs.setString(_language, lang);
   }
 
-  static String? getTemperature() {
-    String? result = prefs.getString(_temperatureKey);
-    if (result == null || !result.contains(":")) return null;
-    DateTime savedTemperatureDate = DateTime.parse(result.split(":").first);
-    String savedTemperatureValue = result.split(":").last;
+  static Future<Either<Failure, TempModel>> getTemperature() async {
+    // String? result = prefs.getString(_temperatureKey);
+    // if (result == null || !result.contains(":")) return null;
+    // DateTime savedTemperatureDate = DateTime.parse(result.split(":").first);
+    // String savedTemperatureValue = result.split(":").last;
+    //
+    // if (DateTime.now()
+    //     .isAfter(savedTemperatureDate.add(const Duration(hours: 6)))) {
+    //   return null;
+    // }
+    //
+    // return savedTemperatureValue;
 
-    if (DateTime.now()
-        .isAfter(savedTemperatureDate.add(const Duration(hours: 6)))) {
-      return null;
+    try {
+      TempModel response = await GenericRequest<TempModel>(
+        method: RequestApi.get(
+          url: APIEndPoint.currentTemp(
+            "30.044420",
+            "31.235712",
+          ),
+        ),
+        fromMap: TempModel.fromJson,
+      ).getObject();
+
+      // "${response.currentWeather?.temperature}°C";
+
+      return Right(response);
+    } on ServerException catch (failure) {
+      return Left(ServerFailure(failure.errorMessageModel.statusMessage));
     }
-    return savedTemperatureValue;
   }
 
   static Future<void> setTemperature({required String temperature}) async {

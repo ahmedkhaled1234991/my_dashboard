@@ -53,7 +53,7 @@ class EntryPoint extends StatelessWidget {
           builder: (_, __) => MaterialApp.router(
             scrollBehavior: MyCustomScrollBehavior(),
             routerConfig: GoRouterConfig.router,
-            // theme: ThemeData(fontFamily: "Alexandria"),
+            theme: ThemeData(fontFamily: "ReadexPro"),
             debugShowCheckedModeBanner: false,
             title: 'My Dashboard',
             locale: Locale(appLan.appLang.name),
